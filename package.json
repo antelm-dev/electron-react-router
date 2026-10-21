@@ -1,0 +1,68 @@
+{
+  "name": "electron-react-router",
+  "version": "0.1.0",
+  "description": "Serve a React Router SSR app from the Electron main process through a custom scheme, with Vite HMR in development. Builds on electron-renderer-protocol.",
+  "keywords": [
+    "custom-protocol",
+    "electron",
+    "react-router",
+    "ssr",
+    "vite",
+    "hmr",
+    "typescript"
+  ],
+  "homepage": "https://github.com/antelm-dev/electron-react-router#readme",
+  "bugs": "https://github.com/antelm-dev/electron-react-router/issues",
+  "license": "MIT",
+  "author": "Adel Terki",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antelm-dev/electron-react-router.git"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "electron-renderer-protocol": "^0.2.0"
+  },
+  "peerDependencies": {
+    "electron": ">=25.0.0",
+    "react-router": "^7",
+    "vite": ">=5"
+  },
+  "peerDependenciesMeta": {
+    "vite": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.6",
+    "electron": "40.8.0",
+    "react-router": "^7.14.1",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7",
+    "vitest": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "pnpm@9.15.9"
+}
